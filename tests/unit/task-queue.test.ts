@@ -1,0 +1,2 @@
+import { describe, expect, it } from 'vitest'; import { TaskQueue } from '../../src/task/TaskQueue.js'; import { createTask } from '../../src/task/Task.js';
+describe('TaskQueue', () => { it('returns higher priority tasks first', () => { const queue = new TaskQueue(); queue.enqueue(createTask('low', 'low', 1)); queue.enqueue(createTask('high', 'high', 100)); expect(queue.next()?.kind).toBe('high'); }); });

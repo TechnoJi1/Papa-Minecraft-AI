@@ -1,0 +1,1 @@
+export class NavigationManager { private destination?: { x: number; y: number; z: number }; setDestination(destination: { x: number; y: number; z: number }): void { this.destination = destination; } currentDestination(): typeof this.destination { return this.destination; } }

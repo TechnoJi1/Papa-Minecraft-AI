@@ -1,0 +1,1 @@
+import { config } from '../src/config/config.js'; import { Database } from '../src/database/Database.js'; const database = new Database(config.databasePath); database.close(); console.log('Database migration complete.');

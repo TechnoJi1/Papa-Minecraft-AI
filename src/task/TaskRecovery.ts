@@ -1,0 +1,1 @@
+import type { Task } from './Task.js'; export class TaskRecovery { private interrupted?: Task; pause(task: Task): void { this.interrupted = task; } resume(): Task | undefined { const task = this.interrupted; this.interrupted = undefined; return task; } }

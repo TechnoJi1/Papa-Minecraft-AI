@@ -1,0 +1,1 @@
+export interface ParsedCommand { intent: string; argument: string; } export class CommandParser { parse(message: string): ParsedCommand { const [intent = '', ...rest] = message.trim().replace(/^!/, '').split(/\s+/); return { intent: intent.toLowerCase(), argument: rest.join(' ') }; } }

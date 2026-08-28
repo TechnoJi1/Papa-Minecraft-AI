@@ -1,0 +1,1 @@
+import type { Coordinates } from './CoordinateManager.js'; export class LandmarkManager { private readonly landmarks = new Map<string, Coordinates>(); set(name: string, position: Coordinates): void { this.landmarks.set(name, position); } get(name: string): Coordinates | undefined { return this.landmarks.get(name); } }

@@ -1,0 +1,1 @@
+import { CommandParser, type ParsedCommand } from './CommandParser.js'; export class IntentClassifier { private readonly parser = new CommandParser(); classify(text: string): ParsedCommand { return this.parser.parse(text); } }
