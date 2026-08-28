@@ -1,0 +1,1 @@
+import { rm, mkdir } from 'node:fs/promises'; for (const directory of ['memory/conversations', 'memory/world', 'memory/experiences', 'memory/knowledge']) { await rm(directory, { recursive: true, force: true }); await mkdir(directory, { recursive: true }); } console.log('Memory mirrors reset.');

@@ -1,0 +1,1 @@
+import { GeminiClient, type ModelClient } from './GeminiClient.js'; export class ModelRouter { constructor(private readonly primary: ModelClient = new GeminiClient()) {} complete(prompt: string): Promise<string> { return this.primary.generate(prompt); } }

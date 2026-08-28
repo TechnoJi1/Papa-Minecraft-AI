@@ -1,0 +1,1 @@
+export class LongTermMemory { private readonly facts = new Map<string, string>(); set(key: string, value: string): void { this.facts.set(key, value); } get(key: string): string | undefined { return this.facts.get(key); } }

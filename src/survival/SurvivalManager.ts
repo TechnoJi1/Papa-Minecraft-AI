@@ -1,0 +1,1 @@
+import type { PerceptionSnapshot } from '../perception/WorldScanner.js'; import { ThreatDetection } from '../perception/ThreatDetection.js'; export class SurvivalManager { private readonly threats = new ThreatDetection(); needsEmergency(snapshot: PerceptionSnapshot): boolean { return this.threats.isThreatened(snapshot); } }

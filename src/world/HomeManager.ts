@@ -1,0 +1,1 @@
+import type { Coordinates } from './CoordinateManager.js'; export class HomeManager { private home?: Coordinates; set(position: Coordinates): void { this.home = position; } get(): Coordinates | undefined { return this.home; } }
