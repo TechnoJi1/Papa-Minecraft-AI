@@ -1,19 +1,11 @@
 {
-  "name": "workspace",
-  "version": "0.0.0",
-  "license": "MIT",
-  "scripts": {
-    "preinstall": "sh -c 'rm -f package-lock.json yarn.lock; case \"$npm_config_user_agent\" in pnpm/*) ;; *) echo \"Use pnpm instead\" >&2; exit 1 ;; esac'",
-    "build": "pnpm run typecheck && pnpm -r --if-present run build",
-    "typecheck:libs": "tsc --build",
-    "typecheck": "pnpm run typecheck:libs && pnpm -r --filter \"./artifacts/**\" --filter \"./scripts\" --if-present run typecheck"
-  },
-  "private": true,
-  "dependencies": {
-    "@replit/connectors-sdk": "^0.4.1"
-  },
-  "devDependencies": {
-    "prettier": "^3.9.6",
-    "typescript": "~5.9.3"
-  }
+  "name": "papa-minecraft-ai",
+  "version": "1.0.0",
+  "description": "An autonomous, safety-first Minecraft bot with an AI planning loop.",
+  "type": "module",
+  "main": "dist/main.js",
+  "scripts": {"build":"tsc -p tsconfig.json","lint":"eslint .","test":"vitest run","start":"node dist/main.js","dev":"tsx src/main.ts","setup":"tsx scripts/setup.ts","migrate":"tsx scripts/migrate.ts","reset-memory":"tsx scripts/reset-memory.ts"},
+  "engines":{"node":">=20"},
+  "dependencies":{"@google/generative-ai":"^0.24.1","better-sqlite3":"^11.8.1","dotenv":"^16.4.7","express":"^4.21.2","mineflayer":"^4.25.0","mineflayer-pathfinder":"^2.4.5","pino":"^9.6.0","ws":"^8.18.0"},
+  "devDependencies":{"@eslint/js":"^9.18.0","@types/better-sqlite3":"^7.6.12","@types/express":"^5.0.0","@types/node":"^22.10.5","@types/ws":"^8.5.13","eslint":"^9.18.0","prettier":"^3.4.2","tsx":"^4.19.2","typescript":"^5.7.2","typescript-eslint":"^8.20.0","vitest":"^2.1.8"}
 }

@@ -1,0 +1,2 @@
+export type BotMode = 'offline' | 'connecting' | 'idle' | 'executing' | 'mining' | 'building' | 'fleeing' | 'stopped';
+export class BotState { private mode: BotMode = 'offline'; private reason = 'not started'; set(mode: BotMode, reason = ''): void { this.mode = mode; this.reason = reason; } snapshot(): Readonly<{ mode: BotMode; reason: string }> { return { mode: this.mode, reason: this.reason }; } }

@@ -1,0 +1,1 @@
+import type { Bot } from 'mineflayer'; import { WorldScanner, type PerceptionSnapshot } from './WorldScanner.js'; export class PerceptionManager { constructor(private readonly scanner = new WorldScanner()) {} observe(bot: Bot): PerceptionSnapshot { return this.scanner.scan(bot); } }

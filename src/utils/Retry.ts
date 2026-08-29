@@ -1,0 +1,1 @@
+export async function retry<T>(operation: () => Promise<T>, attempts = 3, delayMs = 300): Promise<T> { let error: unknown; for (let attempt = 0; attempt < attempts; attempt += 1) { try { return await operation(); } catch (caught) { error = caught; if (attempt + 1 < attempts) await new Promise<void>((resolve) => setTimeout(resolve, delayMs * 2 ** attempt)); } } throw error; }
