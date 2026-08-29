@@ -1,0 +1,1 @@
+import { mkdir } from 'node:fs/promises'; for (const directory of ['data', 'memory/conversations', 'memory/world', 'memory/experiences', 'memory/knowledge', 'logs']) await mkdir(directory, { recursive: true }); console.log('Papa-Minecraft-AI directories are ready.');

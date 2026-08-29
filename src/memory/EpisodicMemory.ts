@@ -1,0 +1,1 @@
+export interface Episode { at: number; description: string; } export class EpisodicMemory { private readonly episodes: Episode[] = []; add(description: string): void { this.episodes.push({ at: Date.now(), description }); } all(): readonly Episode[] { return [...this.episodes]; } }

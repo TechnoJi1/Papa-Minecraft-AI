@@ -1,0 +1,1 @@
+export class ShortTermMemory { private readonly entries: string[] = []; remember(entry: string): void { this.entries.push(entry); if (this.entries.length > 100) this.entries.shift(); } recall(): readonly string[] { return [...this.entries]; } }

@@ -1,0 +1,1 @@
+import type { Database } from '../Database.js'; import type { Task } from '../../task/Task.js'; export class TaskRepository { constructor(private readonly db: Database) {} save(task: Task): void { this.db.client.prepare('INSERT OR REPLACE INTO tasks VALUES (?, ?)').run(task.id, JSON.stringify(task)); } }

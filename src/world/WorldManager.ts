@@ -1,0 +1,1 @@
+import { LandmarkManager } from './LandmarkManager.js'; import { HomeManager } from './HomeManager.js'; export class WorldManager { readonly landmarks = new LandmarkManager(); readonly home = new HomeManager(); }

@@ -1,0 +1,1 @@
+import type { PerceptionSnapshot } from '../perception/WorldScanner.js'; export class DecisionEngine { nextGoal(snapshot: PerceptionSnapshot): string { return snapshot.health < 8 ? 'restore health safely' : snapshot.hostiles.length ? 'retreat from nearby threats' : 'idle safely'; } }

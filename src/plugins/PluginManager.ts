@@ -1,0 +1,1 @@
+import type { Plugin } from './Plugin.js'; export class PluginManager { private readonly plugins: Plugin[] = []; register(plugin: Plugin): void { this.plugins.push(plugin); } async initialize(): Promise<void> { await Promise.all(this.plugins.map((plugin) => plugin.initialize())); } }

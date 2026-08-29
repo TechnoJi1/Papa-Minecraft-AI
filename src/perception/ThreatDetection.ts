@@ -1,0 +1,1 @@
+import type { PerceptionSnapshot } from './WorldScanner.js'; export class ThreatDetection { isThreatened(snapshot: PerceptionSnapshot): boolean { return snapshot.health < 8 || snapshot.food < 6 || snapshot.hostiles.length > 0; } }
